@@ -23,6 +23,12 @@ flavorlist-MP25 += $(flavor_dts_file-257F_EV1_OSTL_M33_EXAMPLES)
 flavor_dts_file-257F_DK_OSTL = stm32mp257f-dk-ca35tdcid-ostl.dts
 flavorlist-MP25 += $(flavor_dts_file-257F_DK_OSTL)
 
+flavor_dts_file-MYD_2G_OSTL = myb-stm32mp257x-2GB-ca35tdcid-ostl.dts
+flavorlist-MP25 += $(flavor_dts_file-MYD_2G_OSTL)
+
+flavor_dts_file-MYD_1G_OSTL = myb-stm32mp257x-1GB-ca35tdcid-ostl.dts
+flavorlist-MP25 += $(flavor_dts_file-MYD_1G_OSTL)
+
 flavor_dts_file-257F_EV1_RT = stm32mp257f-ev1-rt.dts
 flavorlist-MP25 += $(flavor_dts_file-257F_EV1_RT)
 
@@ -35,6 +41,6 @@ flavorlist-MP25 += $(flavor_dts_file-MYB_1G_OSTL_M33_EXAMPLES)
 flavor_dts_file-MYB_2G_OSTL_M33_EXAMPLES = myb-stm32mp257x-2GB-ca35tdcid-ostl-m33-examples.dts
 flavorlist-MP25 += $(flavor_dts_file-MYB_2G_OSTL_M33_EXAMPLES)
 
-ifneq ($(filter $(CFG_EMBED_DTB_SOURCE_FILE),$(flavor_dts_file-257F_EV1_OSTL) $(flavor_dts_file-257F_DK_OSTL)),)
+ifneq ($(filter $(CFG_EMBED_DTB_SOURCE_FILE),$(flavor_dts_file-257F_EV1_OSTL) $(flavor_dts_file-257F_DK_OSTL) $(flavor_dts_file-MYD_2G_OSTL) $(flavor_dts_file-MYD_1G_OSTL)),)
 $(call force,CFG_WITH_TUI,y)
 endif
